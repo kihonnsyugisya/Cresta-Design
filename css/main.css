@@ -1,0 +1,402 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-family: Roboto;
+}
+
+h3, p {
+  font-family: Noto Sans CJK JP;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+  /* 開閉用ボタンがクリックされた時のスタイル */
+}
+
+.header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 74px;
+}
+
+.header h1 {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 26px;
+  color: #fff;
+}
+
+.header nav {
+  height: 74px;
+  background: #1b1310;
+  z-index: 2;
+}
+
+.header .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  border: 0;
+}
+
+.header .menu-btn {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+@media (min-width: 576px) {
+  .header .menu-btn {
+    display: none;
+  }
+}
+
+.header .menu-btn span {
+  color: #fff;
+}
+
+.header .menu-btn span:after {
+  content: attr(data-txt-menu);
+}
+
+.header .open .menu-btn span:after {
+  content: attr(data-txt-close) "";
+}
+
+.header .menu {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header .menu ul {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 0;
+}
+
+.header .menu li {
+  list-style: none;
+  width: 300px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header .menu li a {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+}
+
+.header .menu li a:hover {
+  color: #999;
+}
+
+/* 開閉用ボタンがクリックされた時のスタイル */
+.open .menu {
+  cursor: url(../images/cross.svg), auto;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-bg {
+  width: 100%;
+  min-height: 740px;
+  background: url(../img/fv-bgi@2x.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 575px) {
+  .hero-bg {
+    background: url(../img/fv-bgi_sp@2x.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 590px;
+  }
+}
+
+.hero-inner {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hero-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 449px;
+  height: 136px;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+}
+
+@media (max-width: 575px) {
+  .hero-box {
+    width: 300px;
+    height: 100px;
+  }
+}
+
+.hero-text {
+  font-weight: 500;
+  font-size: 50px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  line-height: 136px;
+}
+
+@media (max-width: 575px) {
+  .hero-text {
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    line-height: 100px;
+  }
+}
+
+.about {
+  height: 437px;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.about-inner {
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.about-box {
+  margin: 0 205px;
+}
+
+@media (max-width: 767px) {
+  .about-box {
+    margin: 0 15px;
+  }
+}
+
+.about-box h2 {
+  text-align: center;
+  margin-bottom: 77px;
+}
+
+.about h3 {
+  margin-bottom: 45px;
+}
+
+.service {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.service-inner {
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.service img {
+  width: 100%;
+}
+
+.service h2 {
+  text-align: center;
+  margin-bottom: 77px;
+}
+
+.service h3 {
+  margin-bottom: 45px;
+}
+
+@media (max-width: 992px) {
+  .service-box {
+    margin: 0 205px;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-box {
+    margin: 0 15px;
+  }
+}
+
+@media (min-width: 993px) {
+  .service-box {
+    padding-top: 25px;
+  }
+}
+
+.service .row {
+  margin-bottom: 50px;
+}
+
+.news {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.news-inner {
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.news h2 {
+  text-align: center;
+  margin-bottom: 77px;
+}
+
+.news .col-md-4 {
+  margin-bottom: 50px;
+}
+
+.news-card {
+  width: 100%;
+  -webkit-box-shadow: 0 0 8px gray;
+          box-shadow: 0 0 8px gray;
+}
+
+.news img {
+  width: 100%;
+}
+
+.news-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 123px;
+}
+
+.news-text p {
+  width: 320px;
+  margin: 0 34px;
+  font-family: Hiragino Kaku Gothic ProN;
+  width: 255px;
+  font-weight: normal;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: #141414;
+}
+
+.contact {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.contact-inner {
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 77px;
+}
+
+.contact form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact .form-control {
+  border: 1px solid #000;
+  border-radius: initial;
+}
+
+.contact textarea {
+  height: 171px;
+  resize: none;
+  padding: 0 1px;
+  border: 1px solid #000;
+}
+
+.contact .btn-box {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.contact .btn-box button {
+  width: 235px;
+  height: 59px;
+  border-radius: 29.5px;
+  background: #1b1310;
+  -webkit-box-shadow: 0px 0px 6px #1b1310;
+          box-shadow: 0px 0px 6px #1b1310;
+  color: #fff;
+  font-family: Avenir;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  line-height: 30px;
+}
+
+footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 60px;
+  background: #1b1310;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .copyright {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  line-height: 30px;
+  text-align: left;
+  color: #fff;
+  display: inline;
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */
